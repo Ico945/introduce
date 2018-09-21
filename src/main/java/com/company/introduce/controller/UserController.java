@@ -19,7 +19,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/admin")
 public class UserController {
     @Autowired

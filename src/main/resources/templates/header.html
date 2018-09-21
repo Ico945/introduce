@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container" th:fragment="header">
+    <div class="row">
+        <div class="header-wrap clearfix">
+            <div class="col-md-4">
+                <div id="logo" class="logo mgl2">
+                    <a href="index" rel="home">
+                        <img th:src="@{images/logo.png}" alt="image">
+                    </a>
+                </div><!-- /.logo -->
+                <div class="btn-menu">
+                    <span></span>
+                </div><!-- //mobile menu button -->
+            </div>
+            <div class="col-md-8">
+                <div class="nav-wrap">
+                    <nav id="mainnav" class="mainnav">
+                        <ul class="menu">
+                            <li><a href="index">Home</a></li>
+                            <li><a href="about">About us</a></li>
+                            <li><a href="shop">Shop</a></li>
+                            <li><a href="details">Details</a></li>
+                            <li><a href="contact">contact</a></li>
+                        </ul><!-- /.menu -->
+                    </nav><!-- /.mainnav -->
+
+                    <div class="top-search">
+                        <form action="#" id="searchform-all" method="get">
+                            <div>
+                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                <input type="submit" value="" id="searchsubmit">
+                            </div>
+                        </form>
+                    </div><!-- /top-search -->
+
+                    <ul class="menu menu-extra">
+                        <li class="show-search">
+                            <a href="#"><i class="icon_search"></i></a>
+                        </li>
+                    </ul>
+                </div><!-- /.nav-wrap -->
+            </div>
+        </div><!-- /.header-inner -->
+    </div><!-- /.row -->
+</div>
+</body>
+</html>

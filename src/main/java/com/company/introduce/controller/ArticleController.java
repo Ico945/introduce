@@ -1,15 +1,10 @@
 package com.company.introduce.controller;
 
-import com.company.introduce.entity.Article;
 import com.company.introduce.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Controller
 @RequestMapping(value = "/")
@@ -39,7 +34,7 @@ public class ArticleController {
 
     @RequestMapping("/details")
     public String shop_details(Model model) {
-        return "shop_details";
+        return "details";
     }
 
 }

@@ -79,50 +79,7 @@
 
         <!-- Header -->            
         <header id="header" class="header header-classic clearfix">
-            <div class="container">
-                <div class="row">                 
-                    <div class="header-wrap clearfix">
-                        <div class="col-md-4">
-                            <div id="logo" class="logo mgl2">
-                                <a href="index" rel="home">
-                                    <img th:src="@{images/logo.png}" alt="image">
-                                </a>
-                            </div><!-- /.logo -->
-                            <div class="btn-menu">
-                                <span></span>
-                            </div><!-- //mobile menu button -->
-                        </div>
-                        <div class="col-md-8">
-                            <div class="nav-wrap">                            
-                                <nav id="mainnav" class="mainnav">
-                                    <ul class="menu"> 
-                                        <li><a href="index.html">Home</a></li>   
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="shop_details.html">Details</a></li>
-										<li><a href="contact.html">contact</a></li>
-                                    </ul><!-- /.menu -->
-                                </nav><!-- /.mainnav --> 
-
-                                <div class="top-search">                        
-                                    <form action="#" id="searchform-all" method="get">
-                                        <div>
-                                            <input type="text" id="s" class="sss" placeholder="Search...">
-                                            <input type="submit" value="" id="searchsubmit">
-                                        </div>
-                                    </form>
-                                </div><!-- /top-search --> 
-
-                                <ul class="menu menu-extra">
-                                    <li class="show-search">
-                                        <a href="#"><i class="icon_search"></i></a>
-                                    </li>
-                                </ul>  
-                            </div><!-- /.nav-wrap -->
-                        </div>                      
-                    </div><!-- /.header-inner -->                 
-                </div><!-- /.row -->
-            </div>
+            <div th:include="header :: header"></div>
         </header><!-- /.header -->
 
         <div class="wrap-slider">
@@ -292,91 +249,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="container">
-                <div class="row"> 
-                    <div class="col-md-3 col-sm-6">  
-                        <div class="widget widget-infomation">
-                            <h3 class="logo-footer"><a href="index.html">SPECIALIST</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-                            <ul class="flat-information">
-                                <li class="phone"><a href="#">258-556-189</a></li>
-                                <li class="address"><a href="#">John Doe, 123 Main St Chicago</a></li>
-                                <li class="email"><a href="#">info@greenorganic.com</a></li>
-                                <li class="skype"><a href="#">specialist</a></li>
-                            </ul>           
-                        </div>         
-                    </div><!-- /.col-md-3 --> 
-
-                    <div class="col-md-3 col-sm-6">  
-                        <div class="widget widget-out-link">
-                            <h4 class="widget-title">Our Links</h4>
-                            <ul class="one-half">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Projects</a></li>
-                            </ul>
-                            <ul class="one-half">
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Support</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="widget widget-recent-new">
-                            <h4 class="widget-title">Recent News</h4>
-                            <ul class="popular-new">
-                                <li>
-                                    <div class="thumb">
-                                        <img th:src="@{images/popular/1.jpg}" alt="image">
-                                    </div>
-                                    <div class="text">
-                                        <h6><a href="#">Why Executec - Our Expertise</a></h6>
-                                        <span>11 Fer , 2017</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb">
-                                        <img th:src="@{images/popular/2.jpg}" alt="image">
-                                    </div>
-                                    <div class="text">
-                                        <h6><a href="#">Creating Business Value.</a></h6>
-                                        <span>11 Fer , 2017</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb">
-                                        <img th:src="@{images/popular/3.jpg}" alt="image">
-                                    </div>
-                                    <div class="text">
-                                        <h6><a href="#">Business Planning Series</a></h6>
-                                        <span>11 Fer , 2017</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="widget widget-letter">
-                            <h4 class="widget-title">Newsletter</h4>
-                            <p class="info-text">Subscribe our newsletter gor get notification about new updates, information discount,</p>
-                            <form novalidate="" class="subscribe-form" id="subscribeform" method="post" action="#">
-                                <p class="comment-form-email">                          
-                                    <input type="email" placeholder="Enter Your Email" size="30" value="" name="email" id="emailsubscribe">
-                                </p>                      
-                                <p class="form-submit">                 
-                                    <button class="flat-btn comment-submit">SUBSCRIBE</button>
-                                </p>
-                            </form>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row -->    
-            </div><!-- /.container -->
+            <div th:include="footer :: footer"></div>
         </footer>
 
         <!-- Bottom -->
