@@ -11,9 +11,6 @@ import java.util.List;
 @Service
 public class ArticleService {
     @Autowired
-    UserDao userDao;
-
-    @Autowired
     ArticleDao articleDao;
 
     // 列出全部文章

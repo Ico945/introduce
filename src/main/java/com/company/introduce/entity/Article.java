@@ -13,20 +13,33 @@ public class Article {
     @Column(name = "id", columnDefinition = "varchar(64) binary")
     private String id;
 
-
+    // 文章标题
     @Column(name = "title")
     private String title;
 
-    @Column(name = "content" , columnDefinition = "text")
+    // 文章作者
+    @Column(name = "author", columnDefinition = "varchar(64)")
+    private String author;
+
+    // 文章分类
+    @Column(name = "category", columnDefinition = "varchar(64)")
+    private String category;
+
+    // 文章正文
+    @Column(name = "content", columnDefinition = "text")
     private String content;
 
+    // 文章中图片资源路径
+    @Column(name = "picture", columnDefinition = "text")
+    private String picture;
 
-    @Column(name = "summary", columnDefinition = "text")
-    private String summary;
+    // 访问量
+    @Column(name = "views", columnDefinition = "int")
+    private String views;
 
-    @Column(name = "date", columnDefinition = "varchar(64)")
+    // 发表时间
+    @Column(name = "date", columnDefinition = "date")
     private String date;
-
 
     public String getId() {
         return id;
@@ -44,6 +57,22 @@ public class Article {
         this.title = title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public String getContent() {
         return content;
     }
@@ -52,12 +81,20 @@ public class Article {
         this.content = content;
     }
 
-    public String getSummary() {
-        return summary;
+    public String getPicture() {
+        return picture;
     }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getViews() {
+        return views;
+    }
+
+    public void setViews(String views) {
+        this.views = views;
     }
 
     public String getDate() {
