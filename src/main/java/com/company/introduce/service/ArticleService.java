@@ -32,4 +32,9 @@ public class ArticleService {
     public Article findById(String id){
         return articleDao.findById(id).orElse(null);
     }
+
+    // 通过分类查找文章
+    public List<Article> findByCategory(String category) {
+        return articleDao.findByCategory(category);
+    }
 }
