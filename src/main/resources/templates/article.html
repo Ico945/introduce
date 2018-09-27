@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
@@ -14,26 +14,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/bootstrap.css}" >
+    <link rel="stylesheet" type="text/css" th:href="@{stylesheets/bootstrap.css}" >
 
     <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{stylesheets/style.css}">
 
     <!-- Colors -->
-    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/colors/color1.css}" id="colors">
+    <link rel="stylesheet" type="text/css" th:href="@{stylesheets/colors/color1.css}" id="colors">
 
     <!-- Responsive -->
-    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/responsive.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{stylesheets/responsive.css}">
     
     <!-- Animation Style -->
-    <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{stylesheets/animate.css}">
 
     <!--[if lt IE 9]>
     <script src="../static/javascript/html5shiv.js"></script>
     <script src="../static/javascript/respond.min.js"></script>
     <![endif]-->
 </head>                                 
-<body class="header-sticky">   
+<body class="header-sticky"> 
     <!-- Preloader -->
     <section class="loading-overlay">
         <div class="Loading-Page">
@@ -87,58 +87,72 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-title">
-                            <div class="breadcrumbs mgl2">
+                            <div class="breadcrumbs pd-space2">
                                 <ul>
-                                    <li><a href="#">主页</a></li>
-                                    <li>提供服务</li>
+                                    <li><a href="/">主页</a></li>
+                                    <li>新闻</li>
                                 </ul>
                             </div><!-- breadcrumb -->
-                            <!-- <div class="page-content ">
-                                <span>Grid</span>
-                            </div> -->
+                            <div class="page-content">
+                                <span class="mgr2">新闻中心</span>
+                            </div>
                         </div><!-- page-title -->
                     </div>
                 </div>
             </div><!-- container -->
         </div><!-- wrap-slider -->
 
-        <section class="">
+        <section class="flat-row pdbottom home-shop">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-4">
                         <div class="sidebar">
                             <div class="widget widget-categories style2">
-                                <h4 class="widget-title">分类</h4>
+                                <h4 class="widget-title">新闻分类</h4>
                                 <ul class="cotegories">
-                                    <li>类型<span>数量</span></li>
-                                    <li><a href="#">高智能混合气体分解系统</a><span>(2)</span></li>
-                                    <li class="active"><a href="#">高压废气裂变系统</a><span>(3)</span></li>
-                                    <li><a href="#">化学溶液降解系统 </a><span>(7)</span></li>
-
+                                    <li>类型<span>阅读数</span></li>
+                                    <li><a href="#">参与建德中学修建</a><span>(2)</span></li>
+                                    <li class="active"><a href="#">千岛湖排污项目</a><span>(3)</span></li>
+                                    
                                 </ul>
                             </div>
+
                             <div class="widget widget-amazing">
                                 <div class="flat-amazing">
                                     <span>联系方式</span>
                                     <p align="left">电话：0579-82361358</p>
                                     <p align="left">传真：0579-82361358</p>
-                                    <p align="left">手机：18006558385</p>
+                                    <p align="left">手机：18006558385</p>    
                                     <p align="left">联系人：叶晓芳</p>
-                                    <p align="left">网址：www.jhzhonglan.com</p>
+                                    <p align="left">网址：www.jhzhonglan.com</p>       
                                     <p align="left">地址：浙江省金华市金义都市新区</p>
-                                </div>
+                                </div>          
                             </div>
+ 
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="">我是文章</div>
-                        <div class="blog-pagination">
-                            <ul class="flat-pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li class="next"><a href="#">Next</a></li>
-                            </ul><!-- /.flat-pagination -->
-                        </div><!-- /.blog-pagination -->       
+                        <div class="article">
+                          <div class="title">
+                              <h2>我是标题</h2>
+                          </div>
+                          <div class="info">
+                            时间，点击量，作者
+                          </div>
+                          <div class="content">
+                            我他妈是内容
+                          </div>
+                          <div class="context">
+                            <ul>
+                              <li>
+                                <a href="">上一篇</a>
+                              </li>
+                              <li>
+                                <a href="">下一篇</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,23 +238,22 @@
     </div><!-- Boxed -->
     
     <!-- Javascript -->
-    <script type="text/javascript" th:src="@{/javascript/jquery.min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/bootstrap.min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.easing.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/imagesloaded.min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.isotope.min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery-waypoints.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.magnific-popup.min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.cookie.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.fitvids.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/parallax.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/smoothscroll.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.flexslider-min.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/owl.carousel.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery-validate.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery.mb.YTPlayer.js}"></script>
-    <script type="text/javascript" th:src="@{/javascript/jquery-ui.js}"></script>
-    
+    <script type="text/javascript" th:src="@{javascript/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.easing.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/imagesloaded.min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.isotope.min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery-waypoints.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.magnific-popup.min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.cookie.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.fitvids.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/parallax.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/smoothscroll.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.flexslider-min.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/owl.carousel.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery-validate.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery.mb.YTPlayer.js}"></script>
+    <script type="text/javascript" th:src="@{javascript/jquery-ui.js}"></script>
     
 
     <script type="text/javascript" th:src="@{javascript/main.js}"></script>
