@@ -48,7 +48,7 @@ public class UserController {
             cookie.setHttpOnly(true);
             cookie.setMaxAge(60*60);
             response.addCookie(cookie);
-            System.out.println(cookie.getName());
+            // System.out.println(cookie.getName());
             return "登录成功";
         }else {
             return "登录失败";

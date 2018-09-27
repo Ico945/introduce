@@ -14,10 +14,10 @@ public class UserService {
 
         User user = userDao.findByUsernameAndPassword(username, password);
         if(null == user){
-
+            // 登录失败
             return false;
         }else {
-
+            // 登录成功
             return true;
         }
     }
