@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ArticleDao extends JpaRepository<Article, String> {
-    @Query("from Article a where a.category = :category")
-    List<Article> findByCategory(@Param("category") String category);
+    @Query("from Article a where a.title = :title")
+    Article findByTitle(@Param("title") String title);
 }

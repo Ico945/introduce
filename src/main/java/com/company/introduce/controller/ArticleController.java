@@ -38,26 +38,59 @@ public class ArticleController {
 
     @RequestMapping("/service")
     public String service(Model model) {
-        return "service";
-    }
-    @RequestMapping("/service/{category}")
-    public String service_one(Model model, @PathVariable String category) {
-        List<Products> products = productsService.findByCategory(category);
-        model.addAttribute("articles", products);
+        List<Products> products = productsService.list();
+        model.addAttribute("products", products);
         return "service";
     }
 
+    @RequestMapping("/service/article/{id}")
+    public String service_one(Model model, @PathVariable String id) {
+        int previous_id = 0;
+        int next_id = 0;
+        List<Article> articles = articleService.list();
+        Article article = articleService.findById(id);
+        if (articles.indexOf(article)==0) {
+            if (articles.size()>1)
+                next_id = articles.get(1).getId();
+        }
+        if (articles.indexOf(article)==articles.size()-1) {
+            if (articles.size()>1)
+                previous_id = articles.get(articles.size()-2).getId();
+        }
+
+        model.addAttribute("previous_id", previous_id);
+        model.addAttribute("next_id", next_id);
+        model.addAttribute("article", article);
+        return "article(products)";
+    }
 
     @RequestMapping("/news")
     public String news(Model model) {
-        return "news";
-    }
-    @RequestMapping("/news/{category}")
-    public String news_one(Model model, @PathVariable String category) {
-        List<Article> articles = articleService.findByCategory(category);
+        List<Article> articles = articleService.list();
         model.addAttribute("articles", articles);
         return "news";
     }
+    @RequestMapping("/news/article/{id}")
+    public String news_one(Model model, @PathVariable String id) {
+        int previous_id = 0;
+        int next_id = 0;
+        List<Article> articles = articleService.list();
+        Article article = articleService.findById(id);
+        if (articles.indexOf(article)==0) {
+            if (articles.size()>1)
+                next_id = articles.get(1).getId();
+        }
+        if (articles.indexOf(article)==articles.size()-1) {
+            if (articles.size()>1)
+                previous_id = articles.get(articles.size()-2).getId();
+        }
+
+        model.addAttribute("previous_id", previous_id);
+        model.addAttribute("next_id", next_id);
+        model.addAttribute("article", article);
+        return "article";
+    }
+
 
     @RequestMapping("/contact")
     public String contact(Model model) {

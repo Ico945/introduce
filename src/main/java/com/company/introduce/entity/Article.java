@@ -10,7 +10,7 @@ public class Article {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
-    @Column(name = "id", columnDefinition = "varchar(64) binary")
+    @Column(name = "id", columnDefinition = "int")
     private String id;
 
     // 文章标题
@@ -41,12 +41,12 @@ public class Article {
     @Column(name = "date", columnDefinition = "date")
     private String date;
 
-    public String getId() {
-        return id;
+    public int getId() {
+        return Integer.parseInt(id);
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(int id) {
+        this.id = id+"";
     }
 
     public String getTitle() {
@@ -89,12 +89,12 @@ public class Article {
         this.picture = picture;
     }
 
-    public String getViews() {
-        return views;
+    public int getViews() {
+        return Integer.parseInt(views);
     }
 
-    public void setViews(String views) {
-        this.views = views;
+    public void setViews(int views) {
+        this.views = views+"";
     }
 
     public String getDate() {

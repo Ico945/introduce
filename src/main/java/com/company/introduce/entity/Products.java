@@ -10,7 +10,7 @@ public class Products {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
-    @Column(name = "id", columnDefinition = "varchar(64) binary")
+    @Column(name = "id", columnDefinition = "int")
     private String id;
 
     // 文章标题
@@ -34,19 +34,19 @@ public class Products {
     private String picture;
 
     // 访问量
-    @Column(name = "views", columnDefinition = "int")
-    private String views;
+        @Column(name = "numbers", columnDefinition = "int")
+    private String numbers;
 
     // 发表时间
     @Column(name = "date", columnDefinition = "date")
     private String date;
 
-    public String getId() {
-        return id;
+    public int getId() {
+        return Integer.parseInt(id);
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(int id) {
+        this.id = id+"";
     }
 
     public String getTitle() {
@@ -89,12 +89,12 @@ public class Products {
         this.picture = picture;
     }
 
-    public String getViews() {
-        return views;
+    public int getNumbers() {
+        return Integer.parseInt(numbers);
     }
 
-    public void setViews(String views) {
-        this.views = views;
+    public void setNumbers(int numbers) {
+        this.numbers = numbers+"";
     }
 
     public String getDate() {

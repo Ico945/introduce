@@ -90,11 +90,11 @@
                             <div class="breadcrumbs pd-space2">
                                 <ul>
                                     <li><a href="/">主页</a></li>
-                                    <li>新闻</li>
+                                    <li>产品服务</li>
                                 </ul>
                             </div><!-- breadcrumb -->
                             <div class="page-content">
-                                <span class="mgr2">新闻中心</span>
+                                <span class="mgr2">产品中心</span>
                             </div>
                         </div><!-- page-title -->
                     </div>
@@ -127,25 +127,22 @@
                           <div class="title">
                               <h2 th:text="${article.getTitle()}"></h2>
                           </div>
-                          <div class="info" th:text="${article.getDate()}+','+${article.getViews()}+','+${article.getAuthor()}">
-                            时间，点击量，作者
-                          </div>
                           <div class="content" th:text="${article.getContent()}">
                           </div>
                           <div class="context">
                             <ul>
-                              <li th:if="${previous_id!=0}">
-                                <a th:href="@{'/news/article/'+${previous_id}}">上一篇</a>
-                              </li>
-                              <li th:if="${previous_id==0}">
-                                <a>没有了</a>
-                              </li>
-                              <li th:if="${next_id!=0}">
-                                <a th:href="@{'/news/article/'+${next_id}}">下一篇</a>
-                              </li>
-                              <li th:if="${next_id==0}">
-                                <a>没有了</a>
-                              </li>
+                                <li th:if="${previous_id!=0}">
+                                    <a th:href="@{'/service/article/'+${previous_id}}">上一篇</a>
+                                </li>
+                                <li th:if="${previous_id==0}">
+                                    <a>没有了</a>
+                                </li>
+                                <li th:if="${next_id!=0}">
+                                    <a th:href="@{'/service/article/'+${next_id}}">下一篇</a>
+                                </li>
+                                <li th:if="${next_id==0}">
+                                    <a>没有了</a>
+                                </li>
                             </ul>
                           </div>
                         </div>

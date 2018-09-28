@@ -108,13 +108,10 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="sidebar">
                             <div class="widget widget-categories style2">
-                                <h4 class="widget-title">分类</h4>
+                                <h4 class="widget-title">服务</h4>
                                 <ul class="cotegories">
-                                    <li>类型<span>数量</span></li>
-                                    <li><a href="#">高智能混合气体分解系统</a><span>(2)</span></li>
-                                    <li class="active"><a href="#">高压废气裂变系统</a><span>(3)</span></li>
-                                    <li><a href="#">化学溶液降解系统 </a><span>(7)</span></li>
-
+                                    <li>名称</li>
+                                    <li th:each="product:${products}"><a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a></li>
                                 </ul>
                             </div>
                             <div class="widget widget-amazing">
@@ -131,7 +128,7 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="">我是文章</div>
+                        <div class="">放张图吧。。</div>
                         <div class="blog-pagination">
                             <ul class="flat-pagination">
                                 <li class="active"><a href="#">1</a></li>
@@ -243,7 +240,7 @@
     
     
 
-    <script type="text/javascript" th:src="@{javascript/main.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/main.js}"></script>
 
 </body>
 </html>

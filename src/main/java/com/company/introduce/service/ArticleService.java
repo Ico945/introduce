@@ -34,7 +34,7 @@ public class ArticleService {
     }
 
     // 通过分类查找文章
-    public List<Article> findByCategory(String category) {
-        return articleDao.findByCategory(category);
+    public Article findByTitle(String title) {
+        return articleDao.findByTitle(title);
     }
 }
