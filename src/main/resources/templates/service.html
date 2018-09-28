@@ -108,10 +108,11 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="sidebar">
                             <div class="widget widget-categories style2">
-                                <h4 class="widget-title">服务</h4>
+                                <h4 class="widget-title">最近服务案例</h4>
                                 <ul class="cotegories">
-                                    <li>名称</li>
-                                    <li th:each="product:${products}"><a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a></li>
+                                    <li th:each="product:${products_3days}">
+                                        <a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="widget widget-amazing">
@@ -128,14 +129,19 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="">我是文章</div>
-                        <div class="blog-pagination">
-                            <ul class="flat-pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li class="next"><a href="#">Next</a></li>
-                            </ul><!-- /.flat-pagination -->
-                        </div><!-- /.blog-pagination -->       
+                        <div class="">全部服务</div>
+
+                        <li th:each="product:${products}">
+                            <a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a>
+                        </li>
+
+                        <!--<div class="blog-pagination">-->
+                            <!--<ul class="flat-pagination">-->
+                                <!--<li class="active"><a href="#">1</a></li>-->
+                                <!--<li><a href="#">2</a></li>-->
+                                <!--<li class="next"><a href="#">Next</a></li>-->
+                            <!--</ul>&lt;!&ndash; /.flat-pagination &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; /.blog-pagination &ndash;&gt;       -->
                     </div>
                 </div>
             </div>

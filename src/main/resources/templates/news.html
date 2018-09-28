@@ -108,11 +108,13 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="sidebar">
                             <div class="widget widget-categories style2">
-                                <h4 class="widget-title">新闻</h4>
+                                <h4 class="widget-title">热门新闻</h4>
                                 <ul class="cotegories">
                                     <li>标题<span>阅读数</span></li>
-                                    <div th:each="article:${articles}">
-                                        <li><a th:href="@{'/news/article/'+${article.getId()}}" th:text="${article.getTitle()}"></a><span th:text="${article.getViews()}"></span></li>
+                                    <div th:each="article:${articles_sort_by_view}">
+                                        <li><a th:href="@{'/news/article/'+${article.getId()}}" th:text="${article.getTitle()}"></a>
+                                            <span th:text="${article.getViews()}"></span>
+                                        </li>
                                     </div>
                                 </ul>
                             </div>
@@ -132,7 +134,15 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div>我是新闻列表</div>
+                        <div>全部新闻列表</div>
+                        <div th:each="article:${articles_sort_by_date}">
+                            <li>
+                                <a th:href="@{'/news/article/'+${article.getId()}}" th:text="${article.getTitle()}"></a>
+                                <p></p>
+                                <span th:text="${article.getDate()}"></span>
+                                <p>&nbsp;</p>
+                            </li>
+                        </div>
                     </div>
                 </div>
             </div>
