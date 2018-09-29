@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="">全部服务</div>
+                        <div class="">所有合作公司</div>
 
                         <li th:each="product:${products}">
                             <a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a>

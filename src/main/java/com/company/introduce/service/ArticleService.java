@@ -37,4 +37,9 @@ public class ArticleService {
     public Article findByTitle(String title) {
         return articleDao.findByTitle(title);
     }
+
+    // 更新阅读数
+    public void updateViews(String id) {
+        articleDao.updateViews(id);
+    }
 }

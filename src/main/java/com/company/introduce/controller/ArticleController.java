@@ -115,6 +115,8 @@ public class ArticleController {
         });
 
         Article article = articleService.findById(id);
+        articleService.updateViews(id);
+
         if (articles.indexOf(article)==0) {
             if (articles.size()>1)
                 next_id = articles.get(1).getId();
