@@ -141,4 +141,9 @@ public class ArticleController {
     }
 
 
+    @RequestMapping("/testmd")
+    public String testmd(Model model) {
+        return "test-md";
+    }
+
 }

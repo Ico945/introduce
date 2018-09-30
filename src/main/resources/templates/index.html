@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/stylesheets/animate.css}">
 
     <!--[if lt IE 9]>
-    <script src="../static/javascript/html5shiv.js"></script>
-    <script src="../static/javascript/respond.min.js"></script>
+    <script src="/javascript/html5shiv.js"></script>
+    <script src="/javascript/respond.min.js"></script>
     <![endif]-->
 </head>
 <body class="header-sticky">
@@ -737,18 +737,7 @@
 
         <!-- Bottom -->
         <div class="bottom">
-            <div class="container">
-                <div class="copyright"> 
-                    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-                </div>
-                <ul class="social-links">
-                    <li><a href="#"><i class="social_facebook"></i></a></li>
-                    <li><a href="#"><i class="social_twitter"></i></a></li>
-                    <li><a href="#"><i class="social_vimeo"></i></a></li>
-                    <li><a href="#"><i class="social_instagram"></i></a></li>
-                    <li><a href="#"><i class="social_skype"></i></a></li>
-                </ul>                   
-            </div><!-- /.container -->
+            <div th:replace="under :: under"></div>
         </div><!-- bottom -->
 
          <!-- Go Top -->
