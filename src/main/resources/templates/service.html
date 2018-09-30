@@ -100,11 +100,13 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div class="">所有合作记录</div>
-
-                        <li th:each="product:${products}">
-                            <a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a>
-                        </li>
+                        <h5 class="text-center">所有合作记录</h5>
+                        <ul class="news-item">
+                            <li th:each="product:${products}">
+                                <a th:href="@{'/service/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a>
+                            </li>
+                        </ul>
+                       
 
                         <!--<div class="blog-pagination">-->
                             <!--<ul class="flat-pagination">-->
