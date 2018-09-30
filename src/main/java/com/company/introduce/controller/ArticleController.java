@@ -23,11 +23,9 @@ public class ArticleController {
 
     @RequestMapping("/")
     public String index(Model model) {
-        List list = articleService.list();
-        if (list.size()<=3)
-            model.addAttribute("articles", list);
-        else
-            model.addAttribute(list.subList(0, 3));
+        List<Products> products = productsService.list();
+        List<Products> products_3days = products.subList(0, 3);
+        model.addAttribute("products", products_3days);
         return "index";
     }
 

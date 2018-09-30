@@ -378,7 +378,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">高智能混合气体分解系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">高压废气裂变系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -404,7 +404,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">化学溶液降解系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -423,7 +423,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">脉冲除尘系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">烟尘处理系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -449,7 +449,7 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">喷漆除VOCS系统</div>    
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p> 
+                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -651,68 +651,65 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="title-section v3 style1">
-                            <h1 class="title">Latest News</h1>
+                            <h1 class="title">近期新闻</h1>
                             <div class="sub-title">
-                                A range of products adapted to your needs
+                                近期合作公司、相关环保设备
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-6" th:each="product:${products}">
                         <article class="post style2 clearfix">
                             <div class="featured-post">
-                                <img th:src="@{/images/new/new-grid/1.jpg}" alt="image">
+                                <img th:src="@{'/images/new/new-grid/'+${product.getId()}+'.jpg'}" alt="image">
                             </div><!-- /.feature-post -->
                             <div class="content-post">
-                                <h5 class="title-post"><a href="#">Here are some of the benefits of products for your business</a></h5>
+                                <h5 class="title-post"><a th:href="@{'/news/article/'+${product.getId()}}" th:text="${product.getTitle()}"></a></h5>
                                 <ul class="meta-post clearfix">
-                                    <li class="vote">
-                                        <a href="#">10</a>
-                                    </li>
                                     <li class="day-time">
-                                        <span>5 Mar 2017</span>
+                                        <span th:text="${product.getDate()}"></span>
                                     </li>
                                 </ul>
                             </div><!-- /.contetn-post -->
                         </article>
                     </div>
-                    <div class="col-md-4 col-sm-6">
-                        <article class="post style2 clearfix">
-                            <div class="featured-post">
-                                <img th:src="@{/images/new/new-grid/2.jpg}" alt="image">
-                            </div><!-- /.feature-post -->
-                            <div class="content-post style2">
-                                <h5 class="title-post"><a href="#">The NBN is Australia’s new broadband network</a></h5>
-                                <ul class="meta-post clearfix">
-                                    <li class="vote">
-                                        <a href="#">10</a>
-                                    </li>
-                                    <li class="day-time">
-                                        <span>5 Mar 2017</span>
-                                    </li>
-                                </ul>
-                            </div><!-- /.contetn-post -->
-                        </article>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <article class="post style2 clearfix">
-                            <div class="featured-post">
-                                <img th:src="@{/images/new/new-grid/3.jpg}" alt="image">
-                            </div><!-- /.feature-post -->
-                            <div class="content-post style3">
-                                <h5 class="title-post"><a href="#">More Telecom renews partnership with Telco Together</a></h5>
-                                <ul class="meta-post clearfix">
-                                    <li class="vote">
-                                        <a href="#">10</a>
-                                    </li>
-                                    <li class="day-time">
-                                        <span>5 Mar 2017</span>
-                                    </li>
-                                </ul>
-                            </div><!-- /.contetn-post -->
-                        </article>
-                    </div>
+                    <!--<div class="col-md-4 col-sm-6">-->
+                        <!--<article class="post style2 clearfix">-->
+                            <!--<div class="featured-post">-->
+                                <!--<img th:src="@{/images/new/new-grid/2.jpg}" alt="image">-->
+                            <!--</div>&lt;!&ndash; /.feature-post &ndash;&gt;-->
+                            <!--<div class="content-post style2">-->
+                                <!--<h5 class="title-post"><a href="#">The NBN is Australia’s new broadband network</a></h5>-->
+                                <!--<ul class="meta-post clearfix">-->
+                                    <!--<li class="vote">-->
+                                        <!--<a href="#">10</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="day-time">-->
+                                        <!--<span>5 Mar 2017</span>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>&lt;!&ndash; /.contetn-post &ndash;&gt;-->
+                        <!--</article>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4 col-sm-6">-->
+                        <!--<article class="post style2 clearfix">-->
+                            <!--<div class="featured-post">-->
+                                <!--<img th:src="@{/images/new/new-grid/3.jpg}" alt="image">-->
+                            <!--</div>&lt;!&ndash; /.feature-post &ndash;&gt;-->
+                            <!--<div class="content-post style3">-->
+                                <!--<h5 class="title-post"><a href="#">More Telecom renews partnership with Telco Together</a></h5>-->
+                                <!--<ul class="meta-post clearfix">-->
+                                    <!--<li class="vote">-->
+                                        <!--<a href="#">10</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="day-time">-->
+                                        <!--<span>5 Mar 2017</span>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>&lt;!&ndash; /.contetn-post &ndash;&gt;-->
+                        <!--</article>-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
