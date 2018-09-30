@@ -5190,6 +5190,21 @@ footer p {
 
 
 
+/* 新闻界面 */
+.news-item .date {
+	display: inline-block;
+	float: right;
+}
+.news-item li {
+	line-height: 35px;
+	font-size: 14px;
+	border-bottom: 1px dashed #ccc;
+	background-image: url(nnl.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 20px;
+}
+
 
 
 

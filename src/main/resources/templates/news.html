@@ -105,15 +105,14 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
-                        <div>全部新闻列表</div>
-                        <div th:each="article:${articles_sort_by_date}">
+                        <h5 class="text-center">全部新闻</h5>
+                        <ul class="news-item" th:each="article:${articles_sort_by_date}">
                             <li>
                                 <a th:href="@{'/news/article/'+${article.getId()}}" th:text="${article.getTitle()}"></a>
-                                <p></p>
-                                <span th:text="${article.getDate()}"></span>
-                                <p>&nbsp;</p>
+                                <span class="date" th:text="${article.getDate()}"></span>
+                                
                             </li>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
